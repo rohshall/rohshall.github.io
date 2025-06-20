@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Assorted tidbits</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>http://localhost:44225/posts/</link>
     <description>Recent content in Posts on Assorted tidbits</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 19 Jun 2025 17:52:28 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:44225/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Architecting_Microservices</title>
-      <link>http://localhost:1313/posts/architecting_microservices/</link>
+      <link>http://localhost:44225/posts/architecting_microservices/</link>
       <pubDate>Thu, 19 Jun 2025 17:52:28 -0700</pubDate>
-      <guid>http://localhost:1313/posts/architecting_microservices/</guid>
+      <guid>http://localhost:44225/posts/architecting_microservices/</guid>
       <description>&lt;h1 id=&#34;architecting-microservices&#34;&gt;Architecting Microservices&lt;/h1&gt;&#xA;&lt;h2 id=&#34;microservices-architectural-anti-patterns&#34;&gt;Microservices architectural anti-patterns&lt;/h2&gt;&#xA;&lt;p&gt;Don&amp;rsquo;t make services glorified databases:&#xA;&lt;a href=&#34;https://www.confluent.io/blog/data-dichotomy-rethinking-the-way-we-treat-data-and-services/&#34;&gt;https://www.confluent.io/blog/data-dichotomy-rethinking-the-way-we-treat-data-and-services/&lt;/a&gt;&#xA;Also, tight coupling between services indicate that we have a distributed monolith.&lt;/p&gt;&#xA;&lt;h2 id=&#34;monitoring&#34;&gt;Monitoring&lt;/h2&gt;&#xA;&lt;p&gt;Things that should be monitored in a microservice include:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;availability&lt;/li&gt;&#xA;&lt;li&gt;performance&lt;/li&gt;&#xA;&lt;li&gt;response time&lt;/li&gt;&#xA;&lt;li&gt;latency&lt;/li&gt;&#xA;&lt;li&gt;error rate&lt;/li&gt;&#xA;&lt;li&gt;application logs&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;These metrics are collected by an event-management system, which correlates all the data from feeds like service monitoring, log monitoring, and infrastructure monitoring, and provide actionable alerts when something happens. “You absolutely need to have monitoring pieces put in place from day one so you understand what is happening within that distributed environment, those distributed instances and how they work together,” said Berg.&lt;/p&gt;</description>
     </item>
   </channel>
