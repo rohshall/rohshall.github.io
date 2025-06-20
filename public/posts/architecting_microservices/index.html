@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Architecting_Microservices | Assorted tidbits</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Architecting Microservices
+Microservices architectural anti-patterns
+Don&rsquo;t make services glorified databases:
+https://www.confluent.io/blog/data-dichotomy-rethinking-the-way-we-treat-data-and-services/
+Also, tight coupling between services indicate that we have a distributed monolith.
+Monitoring
+Things that should be monitored in a microservice include:
+
+availability
+performance
+response time
+latency
+error rate
+application logs
+
+These metrics are collected by an event-management system, which correlates all the data from feeds like service monitoring, log monitoring, and infrastructure monitoring, and provide actionable alerts when something happens. “You absolutely need to have monitoring pieces put in place from day one so you understand what is happening within that distributed environment, those distributed instances and how they work together,” said Berg.">
+    <meta name="generator" content="Hugo 0.147.5">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/architecting_microservices/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/posts/architecting_microservices/">
+  <meta property="og:site_name" content="Assorted tidbits">
+  <meta property="og:title" content="Architecting_Microservices">
+  <meta property="og:description" content="Architecting Microservices Microservices architectural anti-patterns Don’t make services glorified databases: https://www.confluent.io/blog/data-dichotomy-rethinking-the-way-we-treat-data-and-services/ Also, tight coupling between services indicate that we have a distributed monolith.
+Monitoring Things that should be monitored in a microservice include:
+availability performance response time latency error rate application logs These metrics are collected by an event-management system, which correlates all the data from feeds like service monitoring, log monitoring, and infrastructure monitoring, and provide actionable alerts when something happens. “You absolutely need to have monitoring pieces put in place from day one so you understand what is happening within that distributed environment, those distributed instances and how they work together,” said Berg.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-19T17:52:28-07:00">
+    <meta property="article:modified_time" content="2025-06-19T17:52:28-07:00">
+
+  <meta itemprop="name" content="Architecting_Microservices">
+  <meta itemprop="description" content="Architecting Microservices Microservices architectural anti-patterns Don’t make services glorified databases: https://www.confluent.io/blog/data-dichotomy-rethinking-the-way-we-treat-data-and-services/ Also, tight coupling between services indicate that we have a distributed monolith.
+Monitoring Things that should be monitored in a microservice include:
+availability performance response time latency error rate application logs These metrics are collected by an event-management system, which correlates all the data from feeds like service monitoring, log monitoring, and infrastructure monitoring, and provide actionable alerts when something happens. “You absolutely need to have monitoring pieces put in place from day one so you understand what is happening within that distributed environment, those distributed instances and how they work together,” said Berg.">
+  <meta itemprop="datePublished" content="2025-06-19T17:52:28-07:00">
+  <meta itemprop="dateModified" content="2025-06-19T17:52:28-07:00">
+  <meta itemprop="wordCount" content="1218">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Architecting_Microservices">
+  <meta name="twitter:description" content="Architecting Microservices Microservices architectural anti-patterns Don’t make services glorified databases: https://www.confluent.io/blog/data-dichotomy-rethinking-the-way-we-treat-data-and-services/ Also, tight coupling between services indicate that we have a distributed monolith.
+Monitoring Things that should be monitored in a microservice include:
+availability performance response time latency error rate application logs These metrics are collected by an event-management system, which correlates all the data from feeds like service monitoring, log monitoring, and infrastructure monitoring, and provide actionable alerts when something happens. “You absolutely need to have monitoring pieces put in place from day one so you understand what is happening within that distributed environment, those distributed instances and how they work together,” said Berg.">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        Assorted tidbits
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Architecting_Microservices</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-06-19T17:52:28-07:00">June 19, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="architecting-microservices">Architecting Microservices</h1>
+<h2 id="microservices-architectural-anti-patterns">Microservices architectural anti-patterns</h2>
+<p>Don&rsquo;t make services glorified databases:
+<a href="https://www.confluent.io/blog/data-dichotomy-rethinking-the-way-we-treat-data-and-services/">https://www.confluent.io/blog/data-dichotomy-rethinking-the-way-we-treat-data-and-services/</a>
+Also, tight coupling between services indicate that we have a distributed monolith.</p>
+<h2 id="monitoring">Monitoring</h2>
+<p>Things that should be monitored in a microservice include:</p>
+<ol>
+<li>availability</li>
+<li>performance</li>
+<li>response time</li>
+<li>latency</li>
+<li>error rate</li>
+<li>application logs</li>
+</ol>
+<p>These metrics are collected by an event-management system, which correlates all the data from feeds like service monitoring, log monitoring, and infrastructure monitoring, and provide actionable alerts when something happens. “You absolutely need to have monitoring pieces put in place from day one so you understand what is happening within that distributed environment, those distributed instances and how they work together,” said Berg.</p>
+<h2 id="microservices-management-patterns">Microservices management patterns:</h2>
+<p>Microservice management practices can come from the design patterns of the architecture itself.</p>
+<h2 id="centralized-configuration">Centralized configuration</h2>
+<p>Centralized configuration allows developers to deploy across multiple different environments without having to worry about the infrastructure (as in, specifying the configuration for each infrastructure).</p>
+<h2 id="service-communication-patterns">Service communication patterns</h2>
+<p>Two most important considerations for service-to-service communication:</p>
+<ol>
+<li>Service discovery</li>
+<li>Handling service failure - Circuit breaker</li>
+</ol>
+<h3 id="service-discovery">Service discovery</h3>
+<p>Design patterns like service discovery can automatically find new services that become available in the platform so developers don’t have to worry about it.</p>
+<h3 id="circuit-breaker">Circuit Breaker</h3>
+<p>And a circuit breaker pattern can safeguard against unpredictability. For instance, if you have a microservice that depends on another microservice, but can’t guarantee that microservice is always available, you can provide an alternate path to a different service. “A good example would be the Amazon homepage. If a customer goes to buy a book, but the recommendation service is currently down, it shouldn’t stop people from buying the book,” said Crowther. “If you have a graceful way of handling that outage on the recommendation engine without disrupting the rest of the flow, then that is a good design pattern to implement because at least you are giving 95 percent of the functionality back to the customer.”</p>
+<h3 id="service-mesh">Service mesh</h3>
+<p>This is handled typically by a service communication libraries like Twitter&rsquo;s Finagle.
+But, when we have legacy services, it is difficult to change them to use the libraries.
+So, the solution was to use service mesh - set of proxies that handle the service communication
+<a href="http://philcalcado.com/2017/08/03/pattern_service_mesh.html">http://philcalcado.com/2017/08/03/pattern_service_mesh.html</a></p>
+<h2 id="running-transactions-across-microservices">Running transactions across microservices</h2>
+<p>Alternative to distributed transactions:
+<a href="https://initiate.andela.com/event-sourcing-and-cqrs-a-look-at-kafka-e0c1b90d17d8">https://initiate.andela.com/event-sourcing-and-cqrs-a-look-at-kafka-e0c1b90d17d8</a>
+At Andela, each kafka topic maps to a bounded context, which in turn maps to a microservice.</p>
+<h2 id="what-are-aggregates">What are aggregates</h2>
+<p>Aggregates are stateful entities which are referred by their IDs by other aggregates/objects. So, aggregates can be put in any service. Also, the rule is a transaction can update only one aggregate, so a transaction remains limited to one service.
+<a href="https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson">https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson</a>
+A distinctive benefit of this approach is that the aggregates are loosely coupled building blocks. They can be deployed as a monolith or as a set of services. At the start of a project you could use a monolithic architecture. Later, as the size of the application and the development team grows, you can then easily switch to a microservices architecture.
+The role of the Aggregate is to group all required details (small data changes) in order to have one valid business state change (from the domain point of view). The aggregate might be implemented as a class (state and behavior), but its value in design is the fact that it represents only one business change operation, regardless of how many details needs to be changed. That&rsquo;s why the aggregate defines a consistency boundary, every change inside that boundary is part of that unit of work. And it&rsquo;s always about domain state changes, not about data itself (I&rsquo;ll provide an example later).
+Moreover, that&rsquo;s why you don&rsquo;t have aggregates involved in the same unit of work. It doesn&rsquo;t make sense, since each aggregate represents a whole immediately consistent operation that results in one business state change. That change is represented in DDD as a Domain Event. From a high level point of view it can end here, but if we go lower, we need to handle how things will be persisted. However, this is an implementation detail, outside of DDD.
+From Persistence point of view you can store the changes themselves (Event Store) and/or as projections i.e actual data that can be queried easily. That data model is unrelated to the Domain Model, it exists as an implementation detail to have fast(er) reads.
+You may think &ldquo;ok, behaviour first, but we do need input value or existing data in order to perform a domain operation&rdquo;. That&rsquo;s true, however that data is transient and always dependent on the functionality that needs it. When modelling some Domain functionality, our focus is on the rules first and then whatever data is needed (both as input and output).
+<a href="http://blog.sapiensworks.com/post/2018/01/08/DDD-Aggregate-groups-behaviour-not-data">http://blog.sapiensworks.com/post/2018/01/08/DDD-Aggregate-groups-behaviour-not-data</a></p>
+<h3 id="aggregate-always-means-command-model">Aggregate always means command model.</h3>
+<p>An aggregate defines consistency boundaries, that is, everything inside it needs to be immediate consistent. This is important, because it tells us that no matter how many actual changes (state mutations) need to be performed, we have to see them as one commit, one unit of work, basically one &lsquo;big&rsquo; change made up from smaller related changes which need to succeed together.
+An aggregate instance communicates that everything is ok for a specific business state change to happen. And, yes, we need to persist the busines state changes. But that doesn&rsquo;t mean the aggregate itself needs to be persisted (a possible implementation detail). Remember that the aggregate is just a construct to organize business rules, it&rsquo;s not a meant to be a representation of state.
+So, if the aggregate is not the change itself, what is it? The change is expressed as one or more relevant Domain Events that are generated by the aggregate. And those need to be recorded (persisted) and applied (interpreted). When we apply an event we &ldquo;process&rdquo; the business implications of it. This means some value has changed or a business scenario can be triggered. More about that in a future post.
+You can say the job of the aggregate goes like this: &ldquo;Based on the input you gave me and business rules that I know, the following business state changes took place: X happened with these details. Do whatever you want with it, it&rsquo;s not my job, I&rsquo;m done here&rdquo;.
+<a href="http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-1">http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-1</a>
+<a href="http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-2">http://blog.sapiensworks.com/post/2016/07/14/DDD-Aggregate-Decoded-2</a>
+Why eventual consistency is in fact better than consistency:
+<a href="http://blog.sapiensworks.com/post/2018/01/22/Why-do-we-need-eventual-consistency">http://blog.sapiensworks.com/post/2018/01/22/Why-do-we-need-eventual-consistency</a>
+<a href="http://blog.sapiensworks.com/post/2016/07/23/DDD-Eventual-Consistency">http://blog.sapiensworks.com/post/2016/07/23/DDD-Eventual-Consistency</a>
+What is Bounded context?
+<a href="http://blog.sapiensworks.com/post/2014/10/31/DDD-Identifying-Bounded-Contexts-and-Aggregates-Entities-and-Value-Objects.aspx">http://blog.sapiensworks.com/post/2014/10/31/DDD-Identifying-Bounded-Contexts-and-Aggregates-Entities-and-Value-Objects.aspx</a>
+I&rsquo;m not talking about the fact they&rsquo;re in different offices. They have their own internal organization, their own internal rules, employees etc. John doesn&rsquo;t go into Rita&rsquo;s office and modifies the payroll and Rita doesn&rsquo;t go to John&rsquo;s and modifies his code. They could but it would be such a scandal, because if they do that they would be overstepping their boundaries. If Rita finds a bug in the accounting software (developed in-house) she calls the IT department to handle it. She doesn&rsquo;t fire up Visual Studio and starts messing with the code. It isn&rsquo;t her responsibility and she doesn&rsquo;t know how to do it anyway, even if she knows that VS is the program used by John to write code. In fact, VS would be a very strange software on an accountant&rsquo;s computer. Like wise, the payroll files or invoices have no place in the IT department.
+<a href="http://blog.sapiensworks.com/post/2012/04/17/DDD-The-Bounded-Context-Explained.aspx">http://blog.sapiensworks.com/post/2012/04/17/DDD-The-Bounded-Context-Explained.aspx</a></p>
+<h2 id="practical-implementation-of-microservices">Practical implementation of microservices:</h2>
+<p>Kafka could be the event stream through which microservices communicate
+<a href="https://www.confluent.io/blog/apache-kafka-for-service-architectures/">https://www.confluent.io/blog/apache-kafka-for-service-architectures/</a>
+<a href="http://www.devramble.com/microservices-with-spring-boot-spring-cloud/">http://www.devramble.com/microservices-with-spring-boot-spring-cloud/</a></p>
+<p>Are REST calls the best way to communicate among services?
+<a href="https://capgemini.github.io/architecture/is-rest-best-microservices/">https://capgemini.github.io/architecture/is-rest-best-microservices/</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/" >
+    &copy;  Assorted tidbits 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

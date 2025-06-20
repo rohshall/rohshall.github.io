@@ -1,0 +1,4 @@
+baseURL = 'https://rohshall.github.io/'
+languageCode = 'en-us'
+title = 'Assorted tidbits'
+theme = 'ananke'
